@@ -8,7 +8,7 @@ pool:
 stages:
   - stage: build
     jobs:
-      - job: build-start
+      - job: buildStart
         steps:
           - script: |
               echo "line1"
@@ -20,7 +20,7 @@ stages:
         steps:
           - script: |
               echo "job 2 started"
-      - job: build-end
+      - job: buildEend
         steps:
           - script: echo "build ended"
   - stage: deploy
