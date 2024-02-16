@@ -7,3 +7,4 @@ pool:
 
 steps:
 - script: echo "hello world"
+displayName: 'hello'
