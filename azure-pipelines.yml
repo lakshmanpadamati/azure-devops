@@ -5,17 +5,42 @@ pool:
   name: AGENTPOOL
   vmImage: ubuntu-latest
 
-jobs:
-  - job: job1
-    steps:
-    - script: echo "job1"
-    displayName: job1
-    dependsOn: job2
-  - job: job2
-    steps:
-    - script: |
-        echo "multi line script started"
-        echo "multi line script ended"
+stages:
+  - stage: build
+    jobs:
+      - job: build-start
+        steps:
+          - script: |
+              echo "line1"
+              echo "line2"
+          - script:
+              echo "second script"
+          - bash: sudo apt-get update
+      - job: building
+        steps:
+          - script: |
+              echo "job 2 started"
+      - job: build-end
+        steps:
+          - script: echo "build ended"
+  - stage: deploy
+    jobs: 
+      - job: deploy-started
+        steps:
+          - script: echo "deploy job started"
+      - job: deploying
+        steps:
+          - script: |
+              echo "deploying 1"
+              echo "deploying 2"
+      - job: deploy-ended
+        steps:
+          - script: echo "deploying job ended"
+          
+
+
+       
+
     
     
     
