@@ -33,7 +33,7 @@ stages:
           - script: |
               echo "deploying 1"
               echo "deploying 2"
-      - job: deploy-ended
+      - job: deployended
         steps:
           - script: echo "deploying job ended"
           
