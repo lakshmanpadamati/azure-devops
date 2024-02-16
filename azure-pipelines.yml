@@ -5,12 +5,21 @@ pool:
   name: AGENTPOOL
   vmImage: ubuntu-latest
 
-steps:
-- script: echo "single line job"
-  displayName: 'hello'
+jobs:
+  - job: job1
+    steps:
+    - script: echo "job1"
+    displayName: job1
+  - job: job2
+    steps:
+    - script: |
+        echo "multi line script started"
+        echo "multi line script ended"
+    dependsOn: job1
+    
+    
 
-- script: |
-    echo multiline start
-    echo multiline end
-    sudo apt-get update
-  displayName: multiline job 
+
+ 
+
+ 
