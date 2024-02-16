@@ -12,4 +12,5 @@ steps:
 - script: |
     echo multiline start
     echo multiline end
+    python --version
   displayName: multiline job 
