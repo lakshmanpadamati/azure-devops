@@ -12,3 +12,4 @@ steps:
 - script: |
     echo multiline start
     echo multiline end
+  displayName: multiline job 
