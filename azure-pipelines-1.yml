@@ -17,7 +17,11 @@ stages:
         steps:
           - script: echo "build job compeleted"
   - stage: Qadeploy
+    jobs:
+      - job: Qadeploy
   - stage: prodDeploy
+    jobs:
+      - job: prodDeploy
 
 
    
