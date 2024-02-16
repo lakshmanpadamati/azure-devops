@@ -25,7 +25,7 @@ stages:
           - script: echo "build ended"
   - stage: deploy
     jobs: 
-      - job: deploy-started
+      - job: deploySstarted
         steps:
           - script: echo "deploy job started"
       - job: deploying
