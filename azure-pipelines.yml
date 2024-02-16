@@ -12,5 +12,5 @@ steps:
 - script: |
     echo multiline start
     echo multiline end
-    python --version
+    sudo apt-get update
   displayName: multiline job 
