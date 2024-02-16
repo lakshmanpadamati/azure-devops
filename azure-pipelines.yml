@@ -10,12 +10,13 @@ jobs:
     steps:
     - script: echo "job1"
     displayName: job1
+    dependsOn: job2
   - job: job2
     steps:
     - script: |
         echo "multi line script started"
         echo "multi line script ended"
-    dependsOn: job1
+    
     
     
 
